@@ -1,0 +1,66 @@
+= Assay RSpec
+
+{Homepage}[http://rubyworks.github.com/assay-rspec] /
+{Source Code}[http://github.com/rubyworks/assay-rspec] /
+{MailingList}[http://groups.google.com/group/rubyworks-mailinglist]
+
+
+== DESCRIPTION
+
+Assay RSpec is a compatability layer for using RSpec's matcher
+notation with the {Assay}[http://rubyworks.github.com/assay]
+assertions framework.
+
+Assay RSpec defines a set of RSpec-compatible matcher methods which
+depend on Assay's assertion classes. This allows developers to change
+test frameworks without having to change a slew of previously
+defined assertions.
+
+Assay defines assertions in the same way that Ruby defines exceptions.
+An assertion is nothing more that an extended Exception class.
+Assay provides a complete set of these assertion classes for all
+common assertion needs. See {Assay}[http://rubyworks.github.com/assay]
+project for more information on this foundational library.
+
+
+== USAGE
+
+Simply require the `assay/rspec` script, and include the `Assay::Matchers`
+mixin module into your test framework, whereever it requires it (which may
+be as simple as the topleve namespace).
+
+  require 'assay/rspec'
+
+  include Assay::Matchers
+
+Now assertions can be made just as if you were using RSpec.
+
+  10.should be_kind_of(Integer)
+
+
+== LIMITATIONS
+
+Note that compatibility is not 100%, yet. In particluar, the `#have` matcher,
+being a bit complicated, hasn't been implemented. Compatibilty will improve
+with future releases. Please feel _obligated_ to submit a patch, if you need
+a missing a feature ;)
+
+
+== INSTALLATION
+
+To install with RubyGems simply open a console and type:
+
+  $ gem install assay-rspec
+
+Site installation with the tarball can be done with Ruby Setup
+(gem install setup). See http://rubyworks.github.com/setup.
+
+
+== COPYRIGHTS
+
+Copyright (c) 2012 Rubyworks
+
+This program is ditributed under the terms of the *BSD-2-Cluase* license.
+
+See LICENSE.rdoc file for details.
+
