@@ -1,14 +1,22 @@
-= COPYRIGHT NOTICES
+= COPYRIGHTS
 
-== Assay RSpec
+
+== NOTICES
+
+=== Assay RSpec
 
 Copyright:: (c) 2012 RubyWorks
-License:: BSD-2-Clause
-Website:: http://rubyworks.github.com/assay-rspec
+License::   (l) BSD-2-Clause
+Website::   http://rubyworks.github.com/assay-rspec
 
-    Copyright 2012 Rubyworks. All rights reserved.
 
-== BSD-2-Clause License
+== LICENSES
+
+=== BSD-2-Clause License
+
+    Assay RSpec
+
+    Copyright (c) 2012 Rubyworks. All rights reserved.
 
     Redistribution and use in source and binary forms, with or without
     modification, are permitted provided that the following conditions are met:
