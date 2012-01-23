@@ -1,9 +1,10 @@
 #!mast .ruby bin demo qed lib test [A-Z][A-Z]*
 .ruby
-qed/01_rspec_matchers.rdoc
+lib/assay/rspec.rb
+lib/assay-rspec/matchers.rb
+lib/assay-rspec/should.rb
 lib/assay-rspec.rb
 lib/assay-rspec.yml
-lib/assay.rb
 HISTORY.rdoc
 README.rdoc
 LICENSE.rdoc

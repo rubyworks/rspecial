@@ -29,7 +29,7 @@ Simply require the `assay/rspec` script, and include the `Assay::Matchers`
 mixin module into your test framework, whereever it requires it (which may
 be as simple as the topleve namespace).
 
-  require 'assay/rspec'
+  require 'assay-rspec'
 
   include Assay::Matchers
 

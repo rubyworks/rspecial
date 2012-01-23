@@ -48,4 +48,4 @@ description: ! 'Assay RSpec defines a set of RSpec-compatible matcher methods wh
 
   defined assertions.'
 organization: Rubyworks
-date: '2012-01-18'
+date: '2012-01-23'
