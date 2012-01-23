@@ -6,7 +6,7 @@
 === Assay RSpec
 
 Copyright:: (c) 2012 RubyWorks
-License::   &lambda; BSD-2-Clause
+License::   (r) BSD-2-Clause
 Website::   http://rubyworks.github.com/assay-rspec
 
 
