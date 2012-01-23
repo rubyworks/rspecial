@@ -1,6 +1,5 @@
 = COPYRIGHT
 
-
 == NOTICES
 
 === Assay RSpec
@@ -8,7 +7,6 @@
 Copyright:: (c) 2012 RubyWorks
 License::   (r) BSD-2-Clause
 Website::   http://rubyworks.github.com/assay-rspec
-
 
 == LICENSES
 
