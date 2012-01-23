@@ -214,9 +214,3 @@ module Assay::RSpec
   end
 
 end
-
-
-module Assay::Matchers
-  include Assay::RSpec::Matchers
-end
-
