@@ -1,3 +1,4 @@
+module Assay; end
 module Assay::RSpec
 
   # This module provides matchers for RSpec-compatiblity.
