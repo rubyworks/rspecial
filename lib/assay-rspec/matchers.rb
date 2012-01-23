@@ -51,7 +51,7 @@ module Assay::RSpec
     # See {EmptyAssay}.
     #
     def be_empty
-      EmptyAssay.to_matcher
+      EmptyAssay.new
     end
 
     # Passes if +expected+ == +actual+.

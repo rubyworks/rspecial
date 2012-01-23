@@ -1,24 +1,6 @@
-= Matchers
+## RSpec Matchers
 
-== Setup
-
-First we need to require the library.
-
-  require 'assay-rspec'
-
-This will load Assay and the RSpec extension, which will add `#should`
-and `#should_not` to `BasicObject` class, and create a module called
-`Assay::RSpec::Matchers`. This moudle is included into `Assay::Matchers`.
-To make use of it, we simply need to include either of these modules into
-our test scope.
-
-  include ::Assay::Matchers
-
-With that in place, we are ready to use the matchers.
-
-== Matchers
-
-=== should equal
+### should equal
 
   1.should = 1
 
@@ -26,7 +8,7 @@ With that in place, we are ready to use the matchers.
     1.should = 2
   end
 
-=== be_true
+### be_true
 
   true.should be_true
 
@@ -34,7 +16,7 @@ With that in place, we are ready to use the matchers.
     false.should be_true
   end
 
-=== be_false
+### be_false
 
   false.should be_false
 
@@ -42,7 +24,7 @@ With that in place, we are ready to use the matchers.
     true.should be_false
   end
 
-=== be_nil
+### be_nil
 
   nil.should be_nil
 
@@ -50,7 +32,17 @@ With that in place, we are ready to use the matchers.
     true.should be_nil
   end
 
-=== be_close
+### be_empty
+
+  [].should be_empty
+
+  expect ::EmptyAssay do
+    [1].should be_empty
+  end
+
+  [1].should_not be_empty
+
+### be_close
 
   1.should be_close(1.5, 2)
 
@@ -60,7 +52,7 @@ With that in place, we are ready to use the matchers.
 
   1.should_not be_close(0.5, 2)
 
-=== match
+### match
 
   "abc".should match(/a/)
 
@@ -70,7 +62,7 @@ With that in place, we are ready to use the matchers.
 
   "abc".should_not match(/g/)
 
-=== eql
+### eql
 
   1.should eql(1)
 
@@ -80,7 +72,7 @@ With that in place, we are ready to use the matchers.
 
   1.should_not eql(1.0)
 
-=== equal
+### equal
 
   :a.should equal(:a)
 
@@ -90,7 +82,7 @@ With that in place, we are ready to use the matchers.
 
   :a.should_not equal('a')
 
-=== be_instance_of
+### be_instance_of
 
   1.should be_instance_of(Fixnum)
 
@@ -100,7 +92,7 @@ With that in place, we are ready to use the matchers.
 
   1.should_not be_instance_of(String)
 
-=== be_kind_of
+### be_kind_of
 
   1.should be_kind_of(Integer)
 
@@ -110,7 +102,7 @@ With that in place, we are ready to use the matchers.
 
   1.should_not be_kind_of(String)
 
-=== raise_error
+### raise_error
 
   procedure = lambda{ raise ::ArgumentError }
 
@@ -122,7 +114,7 @@ With that in place, we are ready to use the matchers.
 
   procedure.should_not raise_error(::TypeError)
 
-=== respond_to
+### respond_to
 
   "string".should respond_to(:upcase)
 
@@ -132,7 +124,7 @@ With that in place, we are ready to use the matchers.
 
   "string".should_not respond_to(:not_a_method)
 
-=== satisfy
+### satisfy
 
   5.should satisfy{ |x| x > 3 }
 
@@ -142,7 +134,7 @@ With that in place, we are ready to use the matchers.
 
   5.should_not satisfy{ |x| x < 3 }
 
-=== throw_symbol
+### throw_symbol
 
   procedure = lambda{ throw :foo }
 
@@ -153,4 +145,30 @@ With that in place, we are ready to use the matchers.
   end
 
   procedure.should_not throw_symbol(:bar)
+
+## equate_to
+
+This is not strictly an RSpec matcher, but we have thrown it in for good measure.
+It is equivalent to using the `#should=` method.
+
+  10.should equate_to(10)
+
+  expect ::EqualityAssay do
+    10.should equate_to(10.0)
+  end
+
+  10.should_not equate_to(10.0)
+
+## be_like
+
+The `#be_like` matcher is not strictly an RSpec matcher, but we have thrown it
+in for good measure.
+
+  /a/.should be_like('a')
+
+  expect ::LikeAssay do
+    /a/.should be_like('b')
+  end
+
+  /a/.should_not be_like('b')
 
