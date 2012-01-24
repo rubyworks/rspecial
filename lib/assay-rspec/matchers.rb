@@ -28,30 +28,30 @@ module Assay::RSpec
     # There is not equivalant for this in RSpec, we simply add it
     # here to cover all Assays available.
     #
-    # See {LikeAssay}.
+    # @raise LikeAssay}.
     #
     def be_like(criterion)
-      LikeAssay.new(nil, criterion)
+      LikeAssay.assertor(criterion)
     end
 
     # Passes if expected and actual are nto equal within delta tolerance.
     #
     #   value.should be_close(delta, criterion)
     #
-    # See {WithinAssay}.
+    # @raise WithinAssay
     #
     def be_close(delta, criterion)
-      WithinAssay.new(nil, criterion, delta)
+      WithinAssay.assertor(criterion, delta)
     end
 
     # Passes if object is empty.
     #
     #   object.should be_empty
     #
-    # See {EmptyAssay}.
+    # @raise EmptyAssay
     #
     def be_empty
-      EmptyAssay.new
+      EmptyAssay.assertor
     end
 
     # Passes if +expected+ == +actual+.
@@ -62,10 +62,10 @@ module Assay::RSpec
     # This matcher is not supported by RSpec, but is added so that the
     # EqualityAssay has an explict matcher available.
     #
-    # See {EqualityAssay}.
+    # @raise EqualityAssay}.
     #
     def equate_to(exp)
-      EqualityAssay.new(nil, exp)
+      EqualityAssay.assertor(exp)
     end
 
     #
@@ -73,10 +73,10 @@ module Assay::RSpec
     #
     #   5.should satisfy{ |n| n > 3}
     #
-    # See {ExecutionAssay}.
+    # @raise ExecutionAssay
     #
     def satisfy(&block)
-      ExecutionAssay.new(nil, &block)
+      ExecutionAssay.assertor(&block)
     end
 
     #
@@ -84,10 +84,10 @@ module Assay::RSpec
     #
     #   value.should be_false
     #
-    # See {FalseAssay}.
+    # @raise FalseAssay
     #
     def be_false
-      FalseAssay.new
+      FalseAssay.assertor
     end
 
     #
@@ -95,10 +95,10 @@ module Assay::RSpec
     #
     #   object.should be_identical_to(object)
     #
-    # See {IdentityAssay}.
+    # @raise IdentityAssay
     #
     def equal(obj)
-      IdentityAssay.new(nil, obj)
+      IdentityAssay.assertor(obj)
     end
 
     #
@@ -106,10 +106,10 @@ module Assay::RSpec
     #
     #   object.should be_instance_of(class)
     #
-    # See {InstanceAssay}.
+    # @raise InstanceAssay
     #
     def be_instance_of(cls)
-      InstanceAssay.new(nil, cls)
+      InstanceAssay.assertor(cls)
     end
 
     alias :be_an_instance_of :be_instance_of
@@ -119,10 +119,10 @@ module Assay::RSpec
     #
     #   object.should be_kind_of(class)
     #
-    # See {KindAssay}.
+    # @raise KindAssay
     #
     def be_kind_of(cls)
-      KindAssay.new(nil, cls)
+      KindAssay.assertor(cls)
     end
 
     alias :be_a_kind_of :be_kind_of
@@ -134,10 +134,10 @@ module Assay::RSpec
     #
     #   object.should match(regexp)
     #
-    # See {MatchAssay}.
+    # @raise MatchAssay
     #
     def match(regexp)
-      MatchAssay.new(nil, regexp)
+      MatchAssay.assertor(regexp)
     end
 
     #
@@ -145,10 +145,10 @@ module Assay::RSpec
     #
     #   value.should be_nil
     #
-    # See {NilAssay}.
+    # @raise NilAssay
     #
     def be_nil
-      NilAssay.new
+      NilAssay.assertor
     end
 
     #
@@ -157,12 +157,12 @@ module Assay::RSpec
     #   lambda { do_something_risky }.should raise_error
     #   lambda { do_something_risky }.should raise_error(PoorRiskDecisionError)
     #
-    # See {RaiseAssay}.
+    # @raise RaiseAssay
     #
-    # @todo Support for message matching.
+    # @todo Support for message matching ?
     #
     def raise_error(exception=Exception)
-      RaiseAssay.new(nil, exception)
+      RaiseAssay.assertor(exception)
     end
 
     #
@@ -170,10 +170,10 @@ module Assay::RSpec
     #
     #   object.should respond_to(:method_name)
     #
-    # See {RespondAssay}.
+    # @raise RespondAssay
     #
     def respond_to(method)
-      RespondAssay.new(nil, method)
+      RespondAssay.assertor(method)
     end
 
     #
@@ -181,10 +181,10 @@ module Assay::RSpec
     #
     #   object1.should eql(object2)
     #
-    # See {SameAssay}.
+    # @raise EqualityAssay
     #
     def eql(exp)
-      EqualityAssay.new(nil, exp)
+      EqualityAssay.assertor(exp)
     end
 
     #
@@ -193,12 +193,12 @@ module Assay::RSpec
     #   lambda { do_something_risky }.should throw_symbol
     #   lambda { do_something_risky }.should throw_symbol(:that_was_risky)
     #
-    # See {ThrowAssay}.
+    # @raise ThrowAssay
     #
     # @todo Support for throw argument. (Does RSpec even support this?)
     #
     def throw_symbol(sym=nil) #, arg=nil)
-      ThrowAssay.new(nil, sym)
+      ThrowAssay.assertor(sym)
     end
 
     #
@@ -206,10 +206,10 @@ module Assay::RSpec
     #
     #   object.should be_true
     #
-    # See {TrueAssay}.
+    # @raise TrueAssay
     #
     def be_true
-      TrueAssay.new
+      TrueAssay.assertor
     end
 
   end
