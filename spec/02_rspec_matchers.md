@@ -146,7 +146,9 @@
 
   procedure.should_not throw_symbol(:bar)
 
-## equate_to
+## Supplemental Matchers
+
+### equate_to
 
 This is not strictly an RSpec matcher, but we have thrown it in for good measure.
 It is equivalent to using the `#should=` method.
@@ -159,7 +161,7 @@ It is equivalent to using the `#should=` method.
 
   10.should_not equate_to(10.0)
 
-## be_like
+### be_like
 
 The `#be_like` matcher is not strictly an RSpec matcher, but we have thrown it
 in for good measure.
