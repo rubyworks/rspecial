@@ -1,8 +1,9 @@
 = HISTORY
 
-== 0.1.0 | 2012-01-18
+== 0.1.0 | 2012-01-26
 
-This is the initial release of Assay RSpec.
+This is the initial release of Assay RSpec. Currently the library covers
+every RSpec matcher except the `change` and `have` matchers.
 
 Changes:
 

@@ -28,7 +28,7 @@ module Assay::RSpec
     # There is not equivalant for this in RSpec, we simply add it
     # here to cover all Assays available.
     #
-    # @raise LikeAssay}.
+    # @raise LikeAssay
     #
     def be_like(criterion)
       LikeAssay.assertor(criterion)
@@ -62,7 +62,7 @@ module Assay::RSpec
     # This matcher is not supported by RSpec, but is added so that the
     # EqualityAssay has an explict matcher available.
     #
-    # @raise EqualityAssay}.
+    # @raise EqualityAssay
     #
     def equate_to(exp)
       EqualityAssay.assertor(exp)
