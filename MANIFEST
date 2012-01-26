@@ -12,4 +12,5 @@ spec/applique/helper.rb
 spec/applique/setup.rb
 HISTORY.rdoc
 README.rdoc
+DEMOS.md
 COPYING.rdoc
