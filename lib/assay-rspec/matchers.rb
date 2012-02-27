@@ -212,6 +212,29 @@ module Assay::RSpec
       TrueAssay.assertor
     end
 
+    #
+    #
+    #
+    def have(n)
+      Have.new(n)
+    end
+
+    alias :have_exactly :have
+
+    #
+    #
+    #
+    def have_at_least(n)
+      Have.new(n, :at_least)
+    end
+
+    #
+    #
+    #
+    def have_at_most(n)
+      Have.new(n, :at_most)
+    end
+
   end
 
 end
