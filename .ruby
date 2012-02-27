@@ -37,7 +37,7 @@ revision: 0
 created: '2012-01-18'
 summary: RSpec on Assay
 title: Assay RSpec
-version: 0.2.0
+version: 0.2.1
 name: assay-rspec
 description: ! 'Assay RSpec defines a set of RSpec-compatible matcher methods which
 
