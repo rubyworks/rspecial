@@ -1,3 +1,3 @@
-require 'assay-rspec'
+require 'rspecish'
 
 include ::Assay::Matchers

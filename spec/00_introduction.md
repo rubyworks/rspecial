@@ -4,7 +4,7 @@
 
 First we need to require the library.
 
-  require 'assay-rspec'
+  require 'rspecish'
 
 This will load Assay and the RSpec extension, which will add `#should`
 and `#should_not` to `BasicObject` class, and create a module called

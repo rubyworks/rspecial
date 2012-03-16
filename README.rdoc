@@ -2,7 +2,7 @@
 
 {Homepage}[http://rubyworks.github.com/rspecish] /
 {Source Code}[http://github.com/rubyworks/rspecish] /
-{MailingList}[http://groups.google.com/group/rubyworks-mailinglist]
+{Mailing List}[http://groups.google.com/group/rubyworks-mailinglist]
 
 
 == DESCRIPTION
