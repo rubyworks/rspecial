@@ -1,17 +1,17 @@
-= Assay RSpec
+= RSpecish
 
-{Homepage}[http://rubyworks.github.com/assay-rspec] /
-{Source Code}[http://github.com/rubyworks/assay-rspec] /
+{Homepage}[http://rubyworks.github.com/rspecish] /
+{Source Code}[http://github.com/rubyworks/rspecish] /
 {MailingList}[http://groups.google.com/group/rubyworks-mailinglist]
 
 
 == DESCRIPTION
 
-Assay RSpec is a compatability layer for using RSpec's matcher
+RSpecish is a compatability layer for using RSpec's matcher
 notation with the {Assay}[http://rubyworks.github.com/assay]
 assertions framework.
 
-Assay RSpec defines a set of RSpec-compatible matcher methods which
+RSpecish defines a set of RSpec-compatible matcher methods which
 depend on Assay's assertion classes. This allows developers to change
 test frameworks without having to change a slew of previously
 defined assertions.
@@ -29,7 +29,7 @@ Simply require the `assay/rspec` script, and include the `Assay::Matchers`
 mixin module into your test framework, whereever it requires it (which may
 be as simple as the topleve namespace).
 
-  require 'assay-rspec'
+  require 'rspecish'
 
   include Assay::Matchers
 
@@ -50,7 +50,7 @@ a missing a feature ;)
 
 To install with RubyGems simply open a console and type:
 
-  $ gem install assay-rspec
+  $ gem install rspecish
 
 Site installation with the tarball can be done with Ruby Setup
 (gem install setup). See http://rubyworks.github.com/setup.

@@ -1,4 +1,4 @@
-module Assay::RSpec
+module RSpecish
 
   # Delegate to Have Assays.
   #
@@ -53,11 +53,11 @@ module Assay::RSpec
 
       case @relation
       when :at_least
-        Assay::RSpec::HaveAtLeastAssay.assertor(self)
+        RSpecish::HaveAtLeastAssay.assertor(self)
       when :at_most
-        Assay::RSpec::HaveAtMostAssay.assertor(self)
+        RSpecish::HaveAtMostAssay.assertor(self)
       else
-        Assay::RSpec::HaveExactlyAssay.assertor(self)
+        RSpecish::HaveExactlyAssay.assertor(self)
       end
     end
 

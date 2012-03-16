@@ -1,4 +1,4 @@
-module Assay::RSpec
+module RSpecish
 
   # The RSpec::Should module is included into BasicObject to provide 
   # the needed assertion interface that RSpec utilizes. Namely, the
@@ -42,7 +42,8 @@ module Assay::RSpec
 
 end
 
+
 class BasicObject  # Object ?
-  include ::Assay::RSpec::Should
+  include ::RSpecish::Should
 end
 

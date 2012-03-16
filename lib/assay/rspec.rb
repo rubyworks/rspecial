@@ -1,1 +1,1 @@
-require 'assay-rspec'
+require 'rspecish'

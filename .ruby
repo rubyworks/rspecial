@@ -22,29 +22,30 @@ dependencies: []
 alternatives: []
 conflicts: []
 repositories:
-- uri: git@github.com:rubyworks/assay-rspec.git
+- uri: git@github.com:rubyworks/rspecish.git
   scm: git
   name: upstream
 resources:
-  home: http://rubyworks.github.com/assay-rspec
-  docs: http://rubydoc.info/gems/assay-rspec
-  code: http://github.com/rubyworks/assay-rspec
+  home: http://rubyworks.github.com/rspecish
+  docs: http://rubydoc.info/gems/rspecish
+  code: http://github.com/rubyworks/rspecish
   mail: http://groups.google.com/groups/rubyworks-mailinglist
+  chat: http://chat.us.feenode.net/rubyworks
 extra: {}
 load_path:
 - lib
 revision: 0
 created: '2012-01-18'
 summary: RSpec on Assay
-title: Assay RSpec
-version: 0.2.1
-name: assay-rspec
-description: ! 'Assay RSpec defines a set of RSpec-compatible matcher methods which
+title: RSpecish
+version: 0.3.0
+name: rspecish
+description: ! 'RSpecish defines a set of RSpec-compatible matcher methods which
 
-  convert seemlessly to Assay''s assertions. This allows developers to change
+  convert seemlessly to Assay assertions. This allows developers to
 
-  test frameworks without having to change a slew of previously
+  change to BRASS compliant test frameworks without having to change
 
-  written RSpec-based specifications.'
+  a slew of previously written RSpec-based specifications.'
 organization: Rubyworks
-date: '2012-02-26'
+date: '2012-03-16'

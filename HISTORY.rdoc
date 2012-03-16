@@ -1,5 +1,14 @@
 = HISTORY
 
+== 0.3.0 | 2012-03-16
+
+Renamed project from *Assay RSpec* to *RSpecish*.
+
+Changes:
+
+* Rename project to respecish.
+
+
 == 0.2.0 | 2012-02-26
 
 This release adds support for #have matchers.

@@ -1,11 +1,11 @@
 #!mast .ruby .yardopts bin lib spec test [A-Z]*.*
 .ruby
 lib/assay/rspec.rb
-lib/assay-rspec/have.rb
-lib/assay-rspec/matchers.rb
-lib/assay-rspec/should.rb
-lib/assay-rspec.rb
-lib/assay-rspec.yml
+lib/rspecish/have.rb
+lib/rspecish/matchers.rb
+lib/rspecish/should.rb
+lib/rspecish.rb
+lib/rspecish.yml
 spec/00_introduction.md
 spec/01_rspec_should.md
 spec/02_rspec_matchers.md

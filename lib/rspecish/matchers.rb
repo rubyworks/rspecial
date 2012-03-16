@@ -1,5 +1,4 @@
-module Assay; end
-module Assay::RSpec
+module RSpecish
 
   # This module provides matchers for RSpec-compatiblity.
   #
