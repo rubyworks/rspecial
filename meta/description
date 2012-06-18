@@ -1,4 +1,4 @@
-RSpecish defines a set of RSpec-compatible matcher methods which
+RSpectation defines a set of RSpec-compatible matcher methods which
 convert seemlessly to Assay assertions. This allows developers to
 change to BRASS compliant test frameworks without having to change
 a slew of previously written RSpec-based specifications.

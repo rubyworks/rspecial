@@ -1,6 +1,6 @@
-module RSpecish
+module RSpectation
 
-  # The RSpec::Should module is included into BasicObject to provide 
+  # The Should module is included into BasicObject to provide 
   # the needed assertion interface that RSpec utilizes. Namely, the
   # `should` and `should_not` methods.
   #
@@ -44,6 +44,6 @@ end
 
 
 class BasicObject  # Object ?
-  include ::RSpecish::Should
+  include ::RSpectation::Should
 end
 

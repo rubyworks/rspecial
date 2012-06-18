@@ -1,4 +1,4 @@
-module RSpecish
+module RSpectation
 
   # This module provides matchers for RSpec-compatiblity.
   #

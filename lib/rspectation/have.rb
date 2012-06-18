@@ -1,4 +1,4 @@
-module RSpecish
+module RSpectation
 
   # Delegate to Have Assays.
   #

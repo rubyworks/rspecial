@@ -1,1 +1,1 @@
-require 'rspecish'
+require 'rspectation'
