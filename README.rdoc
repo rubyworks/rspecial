@@ -1,37 +1,39 @@
-= RSpecish
+= RSpeclature
 
-{Homepage}[http://rubyworks.github.com/rspecish] /
-{Source Code}[http://github.com/rubyworks/rspecish] /
+{Homepage}[http://rubyworks.github.com/rspeclature] /
+{Source Code}[http://github.com/rubyworks/rspeclature] /
 {Mailing List}[http://groups.google.com/group/rubyworks-mailinglist]
 
 
 == DESCRIPTION
 
-RSpecish is an *assertions framework*. It is implemented as a compatability
-layer for using RSpec's matcher notation over the {Assay}[http://rubyworks.github.com/assay]
-assertions meta-framework.
+RSpeclature is an BRASS-compliant *assertions framework*. It defines
+the RSpec `should` handlers and the set of RSpec-compatible matchers
+allowing developers to change test frameworks without having to change
+a slew of previously defined assertions.
 
-RSpecish defines a set of RSpec-compatible matcher methods which
-depend on Assay's assertion classes. This allows developers to change
-test frameworks without having to change a slew of previously
-defined assertions.
-
-Assay defines assertions in the same way that Ruby defines exceptions.
-An assertion is nothing more that an extended Exception class.
-Assay provides a complete set of these assertion classes for all
-common assertion needs. See {Assay}[http://rubyworks.github.com/assay]
-project for more information on this foundational library.
+Rspeclature utilizes the {Assay}[http://rubyworks.github.com/assay]
+assertions meta-framework on the backend. Assay defines assertions
+in the same way that Ruby defines exceptions. An assertion is nothing
+more that an extended Exception class. Assay provides a complete set
+of these assertion classes for all common assertion needs.
+See {Assay}[http://rubyworks.github.com/assay] project for more
+information on this foundational library.
 
 
-== USAGE
+== INSTRUCTION
 
-Simply require the `rspecish` or `assay/rspec` script, and include the
-`Assay::Matchers` mixin module into your test framework whereever it
-requires it (which may be as simple as the toplevel namespace).
+Simply require the `rspeclature` script, and include the `RSpeclature::Matchers`
+or `Test::Matchers` mixin module into your test framework wherever it requires
+it (which may be as simple as the toplevel namespace).
 
-  require 'rspecish'
+  require 'rspeclature'
 
-  include Assay::Matchers
+  include RSpeclature::Matchers
+
+Or,
+
+  include Test::Matchers
 
 Now assertions can be made just as if you were using RSpec.
 
@@ -49,7 +51,7 @@ a missing a feature ;)
 
 To install with RubyGems simply open a console and type:
 
-  $ gem install rspecish
+  $ gem install rspeclature
 
 Site installation with the tarball can be done with Ruby Setup
 (gem install setup). See http://rubyworks.github.com/setup.
@@ -57,7 +59,7 @@ Site installation with the tarball can be done with Ruby Setup
 
 == COPYRIGHTS
 
-Copyright (c) 2012 Rubyworks
+Copyright (c) 2012 Ruby Works
 
 This program is ditributed under the terms of the *BSD-2-Cluase* license.
 

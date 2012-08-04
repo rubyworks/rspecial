@@ -1,4 +1,4 @@
-module RSpectation
+module RSpeclature
 
   # The Should module is included into BasicObject to provide 
   # the needed assertion interface that RSpec utilizes. Namely, the
@@ -44,6 +44,6 @@ end
 
 
 class BasicObject  # Object ?
-  include ::RSpectation::Should
+  include ::RSpeclature::Should
 end
 

@@ -1,1 +1,1 @@
-require 'rspectation'
+require 'rspeclature'

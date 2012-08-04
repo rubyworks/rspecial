@@ -1,4 +1,4 @@
-module RSpectation
+module RSpeclature
 
   # Delegate to Have Assays.
   #
@@ -53,11 +53,11 @@ module RSpectation
 
       case @relation
       when :at_least
-        RSpecish::HaveAtLeastAssay.assertor(self)
+        RSpeclature::HaveAtLeastAssay.assertor(self)
       when :at_most
-        RSpecish::HaveAtMostAssay.assertor(self)
+        RSpeclature::HaveAtMostAssay.assertor(self)
       else
-        RSpecish::HaveExactlyAssay.assertor(self)
+        RSpeclature::HaveExactlyAssay.assertor(self)
       end
     end
 

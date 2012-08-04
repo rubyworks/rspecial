@@ -1,4 +1,4 @@
-module RSpectation
+module RSpeclature
 
   # This module provides matchers for RSpec-compatiblity.
   #
@@ -24,7 +24,7 @@ module RSpectation
     #
     #   object.should be_like(criterion)
     #
-    # There is not equivalant for this in RSpec, we simply add it
+    # There is no equivalant for this in RSpec, we simply add it
     # here to cover all Assays available.
     #
     # @raise LikeAssay
