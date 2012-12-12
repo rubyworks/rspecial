@@ -1,5 +1,7 @@
 = RSpecial
 
+_Well, isn't that special._
+
 {Homepage}[http://rubyworks.github.com/rspecial] /
 {Source Code}[http://github.com/rubyworks/rspecial] /
 {Mailing List}[http://groups.google.com/group/rubyworks-mailinglist]
