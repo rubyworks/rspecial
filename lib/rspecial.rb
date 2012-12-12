@@ -1,3 +1,7 @@
+# RSpecial (http://rubyworks.github.com/rspecial)
+# Copyright (c) 2012 Rubyworks.
+# License (spdx) BSD-2-Clause.
+
 require 'assay'
 require 'rspecial/matchers'
 require 'rspecial/have'
