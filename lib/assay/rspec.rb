@@ -1,1 +1,1 @@
-require 'rspeclature'
+require 'rspecial'

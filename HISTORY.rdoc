@@ -2,11 +2,11 @@
 
 == 0.3.0 | 2012-03-16
 
-Renamed project from *Assay RSpec* to *RSpecish*.
+Renamed project from *Assay RSpec* to *RSpecial*.
 
 Changes:
 
-* Rename project to respecish.
+* Rename project to respecial.
 
 
 == 0.2.0 | 2012-02-26

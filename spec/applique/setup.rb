@@ -1,3 +1,3 @@
-require 'rspecish'
+require 'rspecial'
+include ::RSpecial::Matchers
 
-include ::Assay::Matchers

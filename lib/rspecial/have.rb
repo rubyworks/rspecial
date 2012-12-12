@@ -1,4 +1,4 @@
-module RSpeclature
+module RSpecial
 
   # Delegate to Have Assays.
   #
@@ -53,11 +53,11 @@ module RSpeclature
 
       case @relation
       when :at_least
-        RSpeclature::HaveAtLeastAssay.assertor(self)
+        RSpecial::HaveAtLeastAssay.assertor(self)
       when :at_most
-        RSpeclature::HaveAtMostAssay.assertor(self)
+        RSpecial::HaveAtMostAssay.assertor(self)
       else
-        RSpeclature::HaveExactlyAssay.assertor(self)
+        RSpecial::HaveExactlyAssay.assertor(self)
       end
     end
 

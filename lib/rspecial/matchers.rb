@@ -1,4 +1,4 @@
-module RSpeclature
+module RSpecial
 
   # This module provides matchers for RSpec-compatiblity.
   #

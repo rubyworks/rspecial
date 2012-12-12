@@ -1,4 +1,4 @@
-RSpeclature defines a set of RSpec-compatible matcher methods which
+RSpecial defines a set of RSpec-compatible matcher methods which
 are BRASS compliant by using Assay as a backend. This allows developers
 to switch to BRASS compliant test frameworks without having to change
 a slew of previously written RSpec-based specifications.
