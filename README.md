@@ -1,15 +1,17 @@
 # RSpecial
 
 [Homepage](http://rubyworks.github.com/rspecial) /
-[Source Code](http://github.com/rubyworks/rspecial) /
-[Mailing List](http://groups.google.com/group/rubyworks-mailinglist)
+[Report Issue](http://github.com/rubyworks/rspecial/issues) /
+[Mailing List](http://groups.google.com/group/rubyworks-mailinglist) /
+[Source Code](http://github.com/rubyworks/rspecial)
+( [![Build Status](https://secure.travis-ci.org/rubyworks/rspecial.png)](http://travis-ci.org/rubyworks/rspecial) )
 
 _Well, isn't that special._
 
 <br/>
 
 RSpecial is an BRASS-compliant *assertions framework*. It defines
-the RSpec `should` handlers and the set of RSpec-compatible matchers
+the RSpec `expect` and `should` handlers and a set of RSpec-compatible matchers
 allowing developers to change test frameworks without having to change
 a slew of previously defined assertions.
 
@@ -18,8 +20,6 @@ assertions meta-framework on the backend. Assay defines assertions
 in the same way that Ruby defines exceptions. An assertion is nothing
 more that an extended Exception class. Assay provides a complete set
 of these assertion classes for all common assertion needs.
-See [Assay](http://rubyworks.github.com/assay) project for more
-information on this foundational library.
 
 
 ## Installation
@@ -42,27 +42,33 @@ it (which may be as simple as the toplevel namespace).
 
     include RSpecial::Matchers
 
-Or,
+Or more generically,
 
     include Test::Matchers
 
 Now assertions can be made just as if you were using RSpec.
+
+    expect(10).to be_kind_of(Integer)
+    
+and the traditional way
 
     10.should be_kind_of(Integer)
 
 
 ## Limitations
 
-Note that compatibility is not 100%, but it is close. Compatibilty will improve
+Compatibility with RSpec is not 100%, but it is close. Compatibilty will improve
 with future releases. Please feel _obligated_ to submit a patch, if you need
 a missing a feature ;)
+
+Error messages aren't alwasy as nice, nor alwasy customizable, as they are in RSpec. 
 
 
 ## Copyrights
 
 Copyright (c) 2012 Rubyworks
 
-This program is ditributed under the terms of the *BSD-2-Cluase* license.
+This program is ditributed under the terms of the [BSD-2-Cluase](http://spdx.org/licenses/BSD-2-Clause) license.
 
 See LICENSE.txt file for details.
 
