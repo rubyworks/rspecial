@@ -71,6 +71,6 @@ RSpecial is copyright open source software
 
     Copyright (c) 2012 Rubyworks
 
-This program is distributed under the terms of the [BSD-2-Cluase](http://spdx.org/licenses/BSD-2-Clause) license.
+This program is distributed under the terms of the [BSD-2-Clause](http://spdx.org/licenses/BSD-2-Clause) license.
 
 See LICENSE.txt file for details.
