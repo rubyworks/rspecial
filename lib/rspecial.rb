@@ -6,6 +6,8 @@ require 'assay'
 require 'rspecial/matchers'
 require 'rspecial/have'
 require 'rspecial/should'
+require 'rspecial/expect'
+require 'rspecial/operatics'
 
 # This Test::Matchers module holds all matcher methods, which can be mixed into
 # one's testing scope (e.g. World).

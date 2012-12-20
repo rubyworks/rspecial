@@ -5,7 +5,7 @@ module RSpecial
   # The set is not fully compataible, but provides most RSpec matchers.
   # The most notable exlusion for the moment is the `have` matchers.
   #
-  # Compatability will improve with time. Feel _obligate_ to submit a
+  # Compatability will improve with time. Feel _obligated_ to submit a
   # patch if you really need it. ;)
   #
   # @see https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -99,6 +99,8 @@ module RSpecial
     def equal(obj)
       IdentityAssay.assertor(obj)
     end
+
+    alias :be_identical_to, :equal
 
     #
     # Passes if object is an instance of class.
