@@ -2,11 +2,13 @@
 
 ## 0.3.0 | 2012-03-16
 
-Renamed project from *Assay RSpec* to *RSpecial*.
+Renamed project from *Assay RSpec* to *RSpecial*, and added
+RSpec's new expect notation.
 
 Changes:
 
 * Rename project to respecial.
+* Add RSpec's new expect notation. 
 
 
 ## 0.2.0 | 2012-02-26

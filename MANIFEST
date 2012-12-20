@@ -1,18 +1,15 @@
-#!mast .ruby .yardopts bin lib spec test [A-Z]*.*
+#!mast -x *.lock .index .ruby .yardopts bin data lib man share spec test *.md *.rdoc *.txt
+.index
 .ruby
 lib/assay/rspec.rb
-lib/rspecish/have.rb
-lib/rspecish/matchers.rb
-lib/rspecish/should.rb
-lib/rspecish.rb
-lib/rspecish.yml
-spec/00_introduction.md
-spec/01_rspec_should.md
-spec/02_rspec_matchers.md
-spec/03_matchers/01_rspec_have.md
-spec/applique/helper.rb
-spec/applique/setup.rb
-HISTORY.rdoc
-README.rdoc
+lib/rspecial/expect.rb
+lib/rspecial/have.rb
+lib/rspecial/matchers.rb
+lib/rspecial/operatics.rb
+lib/rspecial/should.rb
+lib/rspecial.rb
+lib/rspecial.yml
+HISTORY.md
+README.md
 DEMOS.md
-COPYING.rdoc
+LICENSE.txt
