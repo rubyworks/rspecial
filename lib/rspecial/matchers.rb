@@ -103,6 +103,17 @@ module RSpecial
     alias :be_identical_to, :equal
 
     #
+    # Passes if `actual == expected`.
+    #
+    #   object.should eq(object)
+    #
+    # @raise EqualAssay
+    #
+    def eq(obj)
+      EqualAssay.assertor(obj)
+    end
+
+    #
     # Passes if object is an instance of class.
     #
     #   object.should be_instance_of(class)
