@@ -14,7 +14,7 @@ the usual two-step `should ==` call.
 
     10.should = 10
 
-    expect ::EqualAssay do
+    assert_raises ::EqualAssay do
       10.should = 20
     end
 

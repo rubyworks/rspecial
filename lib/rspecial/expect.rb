@@ -34,7 +34,7 @@ module RSpecial
     # @see RSpec::Matchers
     #
     def to(matcher=nil, message=nil, &block)
-      prevent_operator_matchers(:to, matcher)
+      #prevent_operator_matchers(:to, matcher)
       handle_positive_matcher(@target, matcher, message, &block)
     end
 
@@ -54,7 +54,7 @@ module RSpecial
     # @see RSpec::Matchers
     #
     def to_not(matcher=nil, message=nil, &block)
-      prevent_operator_matchers(:to_not, matcher)
+      #prevent_operator_matchers(:to_not, matcher)
       handle_negative_matcher(@target, matcher, message, &block)
     end
 
@@ -62,12 +62,12 @@ module RSpecial
 
   private
 
-    def prevent_operator_matchers(verb, matcher)
-      return if matcher
-
-      raise ArgumentError, "The expect syntax does not support operator matchers, " +
-                           "so you must pass a matcher to `##{verb}`."
-    end
+    #def prevent_operator_matchers(verb, matcher)
+    #  return if matcher
+    #
+    #  raise ArgumentError, "The expect syntax does not support operator matchers, " +
+    #                       "so you must pass a matcher to `##{verb}`."
+    #end
 
     #
     # @todo how to customize the message?
@@ -105,7 +105,7 @@ module RSpecial
     #
     # @todo how to customize the message?
     #
-    def self.handle_negative_matcher(actual, matcher, message=nil, &block)
+    def handle_negative_matcher(actual, matcher, message=nil, &block)
       check_message(message)
 
       #::RSpec::Matchers.last_should = :should_not

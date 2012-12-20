@@ -1,4 +1,3 @@
-
 # Very simple helper assertion system, so we can test
 # Assay without name clashes.
 
@@ -15,7 +14,7 @@ def refute(truth)
   assert(!truth, "refute failed", caller)
 end
 
-def expect(error)
+def assert_raises(error)
   counts = $ASSERTION_COUNTS.dup
   begin
     yield

@@ -100,7 +100,7 @@ module RSpecial
       IdentityAssay.assertor(obj)
     end
 
-    alias :be_identical_to, :equal
+    alias :be_identical_to :equal
 
     #
     # Passes if `actual == expected`.
@@ -245,6 +245,12 @@ module RSpecial
     #
     def have_at_most(n)
       Have.new(n, :at_most)
+    end
+
+    #
+    #
+    def expect(target)
+      Expect.new(target)
     end
 
   end

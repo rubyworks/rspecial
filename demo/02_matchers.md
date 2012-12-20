@@ -4,7 +4,7 @@
 
   1.should = 1
 
-  expect ::EqualAssay do
+  assert_raises ::EqualAssay do
     1.should = 2
   end
 
@@ -12,7 +12,7 @@
 
   true.should be_true
 
-  expect ::TrueAssay do
+  assert_raises ::TrueAssay do
     false.should be_true
   end
 
@@ -20,7 +20,7 @@
 
   false.should be_false
 
-  expect ::FalseAssay do
+  assert_raises ::FalseAssay do
     true.should be_false
   end
 
@@ -28,7 +28,7 @@
 
   nil.should be_nil
 
-  expect ::NilAssay do
+  assert_raises ::NilAssay do
     true.should be_nil
   end
 
@@ -36,7 +36,7 @@
 
   [].should be_empty
 
-  expect ::EmptyAssay do
+  assert_raises ::EmptyAssay do
     [1].should be_empty
   end
 
@@ -46,7 +46,7 @@
 
   1.should be_close(1.5, 2)
 
-  expect ::WithinAssay do
+  assert_raises ::WithinAssay do
     1.should be_close(0.5, 2)
   end
 
@@ -56,7 +56,7 @@
 
   "abc".should match(/a/)
 
-  expect ::MatchAssay do
+  assert_raises ::MatchAssay do
     "abc".should match(/x/)
   end
 
@@ -66,7 +66,7 @@
 
   1.should eql(1)
 
-  expect ::EqualityAssay do
+  assert_raises ::EqualityAssay do
     1.should eql(1.0)
   end
 
@@ -76,7 +76,7 @@
 
   :a.should equal(:a)
 
-  expect ::IdentityAssay do
+  assert_raises ::IdentityAssay do
     "a".should equal("a")
   end
 
@@ -86,7 +86,7 @@
 
   1.should be_instance_of(Fixnum)
 
-  expect ::InstanceAssay do
+  assert_raises ::InstanceAssay do
     1.should be_instance_of(String)
   end
 
@@ -96,7 +96,7 @@
 
   1.should be_kind_of(Integer)
 
-  expect ::KindAssay do
+  assert_raises ::KindAssay do
     1.should be_kind_of(String)
   end
 
@@ -108,7 +108,7 @@
 
   procedure.should raise_error(::ArgumentError)
 
-  expect ::RaiseAssay do
+  assert_raises ::RaiseAssay do
     procedure.should raise_error(::TypeError)
   end
 
@@ -118,7 +118,7 @@
 
   "string".should respond_to(:upcase)
 
-  expect ::RespondAssay do
+  assert_raises ::RespondAssay do
     "string".should respond_to(:not_a_method)
   end
 
@@ -128,7 +128,7 @@
 
   5.should satisfy{ |x| x > 3 }
 
-  expect ::ExecutionAssay do
+  assert_raises ::ExecutionAssay do
     5.should satisfy{ |x| x < 3 }
   end
 
@@ -140,7 +140,7 @@
 
   procedure.should throw_symbol(:foo)
 
-  expect ::ThrowAssay do
+  assert_raises ::ThrowAssay do
     procedure.should throw_symbol(:bar)
   end
 
@@ -155,7 +155,7 @@ It is equivalent to using the `#should=` method.
 
   10.should equate_to(10)
 
-  expect ::EqualityAssay do
+  assert_raises ::EqualityAssay do
     10.should equate_to(10.0)
   end
 
@@ -168,7 +168,7 @@ in for good measure.
 
   /a/.should be_like('a')
 
-  expect ::LikeAssay do
+  assert_raises ::LikeAssay do
     /a/.should be_like('b')
   end
 

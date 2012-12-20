@@ -2,7 +2,8 @@ module RSpecial
 
   # Operatics delegates operator based assertions for execpt.rb.
   #
-  class Operatics
+  class Operatics < Object
+    instance_methods.each{ |m| undef_method m if m.to_s =~ /^\W/ }
 
     #
     def initialize(target, negate=false)
@@ -25,33 +26,31 @@ module RSpecial
 
     #
     def assert!(op, *a, &b)
-      if generic?(op)
-        if assay = Assertion.by_operator(op)
-          return assay.assert!(@target, *a, &b)
-        end
+      if assay = Assertion.by_operator(op)
+        return assay.assert!(@target, *a, &b)
+      else
+        assert! @target.send(op, *a, &b)
       end
-      assert @target.send(op, *a, &b)
     end
 
     #
     def refute!(op, *a, &b)
-      if generic?(op)
-        if assay = Assertion.by_operator(op)
-          return assay.refute!(@target, *a, &b)
-        end
+      if assay = Assertion.by_operator(op)
+        return assay.refute!(@target, *a, &b)
+      else
+        refute! @target.send(op, *a, &b)
       end
-      refute @target.send(op, *a, &b)
     end
 
     #
     def generic?(op)
       @target.method(op).owner == ::Kernel
-    end if Method.method_defined?(:owner)
+    end if ::Method.method_defined?(:owner)
 
     #
     def generic?(op)
       @target.method(op).to_s.include?('(Kernel)')
-    end unless Method.method_defined?(:owner)
+    end unless ::Method.method_defined?(:owner)
 
   end
 
